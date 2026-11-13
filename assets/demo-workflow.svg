@@ -1,0 +1,66 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+  <title id="title">Trello Manager Safe — guarded update workflow</title>
+  <desc id="desc">A fictional terminal walkthrough showing Trello read, approval, confirmed update, and verification steps. No credentials are shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#101b2d"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#43c6ac"/><stop offset="1" stop-color="#5d9df5"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".28"/></filter>
+    <style>
+      .ui{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+      .muted{fill:#91a4ba}.white{fill:#f4f7fb}.green{fill:#65d6b0}.blue{fill:#84b7ff}.yellow{fill:#f3c969}.line{stroke:#27364a;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="1440" height="920" rx="28" fill="url(#bg)"/>
+  <circle cx="1270" cy="65" r="190" fill="#276b77" opacity=".12"/>
+  <circle cx="120" cy="850" r="220" fill="#496bb5" opacity=".10"/>
+  <g class="ui">
+    <rect x="72" y="54" width="42" height="42" rx="12" fill="url(#accent)"/>
+    <path d="M84 67h8v17h-8zm12 0h8v17h-8z" fill="#071523"/>
+    <text x="130" y="82" class="white" font-size="20" font-weight="700">TRELLO MANAGER SAFE</text>
+    <text x="1368" y="81" class="muted" font-size="14" text-anchor="end">FICTIONAL DEMO · NO CREDENTIALS</text>
+    <text x="72" y="163" class="white" font-size="42" font-weight="750">Every change has a checkpoint.</text>
+    <text x="74" y="201" class="muted" font-size="18">Read first. Ask before writing. Verify what changed.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="72" y="244" width="1296" height="592" rx="20" fill="#0a0f18" stroke="#263449"/>
+    <path d="M92 244h1256a20 20 0 0 1 20 20v43H72v-43a20 20 0 0 1 20-20" fill="#172232"/>
+  </g>
+  <circle cx="101" cy="276" r="6" fill="#ff6a67"/><circle cx="123" cy="276" r="6" fill="#f3c969"/><circle cx="145" cy="276" r="6" fill="#65d6b0"/>
+  <text x="720" y="281" class="ui muted" font-size="13" text-anchor="middle">trello-manager-safe · terminal walkthrough</text>
+  <line x1="720" y1="322" x2="720" y2="778" stroke="#314258" stroke-width="2" stroke-dasharray="5 9"/>
+  <g class="ui">
+    <circle cx="112" cy="354" r="18" fill="#153c38" stroke="#43c6ac"/><text x="112" y="360" fill="#65d6b0" font-size="15" font-weight="700" text-anchor="middle">1</text>
+    <text x="144" y="360" class="white" font-size="18" font-weight="700">READ THE BOARD</text>
+    <rect x="104" y="383" width="546" height="126" rx="12" fill="#111b29" stroke="#26364b"/>
+    <text x="128" y="417" class="mono blue" font-size="14">$ python scripts/trello_api.py list_boards</text>
+    <text x="128" y="451" class="mono muted" font-size="14">[{"name":"Product Launch","id":"board_…"}]</text>
+    <text x="128" y="482" class="ui muted" font-size="13">Resolve names to IDs with read-only commands.</text>
+
+    <circle cx="112" cy="570" r="18" fill="#3b3020" stroke="#d9ae4e"/><text x="112" y="576" fill="#f3c969" font-size="15" font-weight="700" text-anchor="middle">2</text>
+    <text x="144" y="576" class="white" font-size="18" font-weight="700">PROPOSE + ASK</text>
+    <rect x="104" y="599" width="546" height="126" rx="12" fill="#111b29" stroke="#26364b"/>
+    <text x="128" y="634" class="ui yellow" font-size="14" font-weight="650">Move “Draft launch post” → “In Review”?</text>
+    <text x="128" y="669" class="ui muted" font-size="14">Board: Product Launch · Card: Draft launch post</text>
+    <text x="128" y="699" class="ui muted" font-size="13">Waiting for your explicit approval…</text>
+
+    <circle cx="768" cy="354" r="18" fill="#173250" stroke="#5799ec"/><text x="768" y="360" fill="#84b7ff" font-size="15" font-weight="700" text-anchor="middle">3</text>
+    <text x="800" y="360" class="white" font-size="18" font-weight="700">RUN THE APPROVED CHANGE</text>
+    <rect x="760" y="383" width="546" height="126" rx="12" fill="#111b29" stroke="#26364b"/>
+    <text x="784" y="417" class="mono blue" font-size="13.5">$ python scripts/trello_api.py move_card </text>
+    <text x="806" y="444" class="mono blue" font-size="13.5">card_… list_review_… --confirm</text>
+    <text x="784" y="482" class="ui muted" font-size="13">--confirm is an extra guard, not user approval.</text>
+
+    <circle cx="768" cy="570" r="18" fill="#153c38" stroke="#43c6ac"/><text x="768" y="576" fill="#65d6b0" font-size="15" font-weight="700" text-anchor="middle">4</text>
+    <text x="800" y="576" class="white" font-size="18" font-weight="700">READ BACK + VERIFY</text>
+    <rect x="760" y="599" width="546" height="126" rx="12" fill="#111b29" stroke="#26364b"/>
+    <text x="784" y="634" class="mono blue" font-size="14">$ python scripts/trello_api.py get_card card_…</text>
+    <text x="784" y="669" class="mono green" font-size="14">"idList":"list_review_…"</text>
+    <text x="784" y="699" class="ui muted" font-size="13">Report success only after the result is verified.</text>
+
+    <rect x="104" y="762" width="1202" height="44" rx="10" fill="#10251f" stroke="#275343"/>
+    <path d="M126 784l7 7 14-16" fill="none" stroke="#65d6b0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="162" y="790" class="ui green" font-size="14" font-weight="650">Permanent deletion is unsupported. Archive instead.</text>
+    <text x="1284" y="790" class="ui muted" font-size="13" text-anchor="end">Sample IDs and board names are fictional.</text>
+  </g>
+  <text x="72" y="880" class="ui muted" font-size="13">Trello Manager Safe · Official Trello REST API · Human approval before every mutation</text>
+</svg>

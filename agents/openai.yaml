@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trello Manager Safe"
+  short_description: "Safely manage Trello without permanent deletion"
+  default_prompt: "Use $trello-manager-safe to review my Trello work and propose safe updates."

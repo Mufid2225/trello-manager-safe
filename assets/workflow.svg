@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="320" viewBox="0 0 1440 320" role="img" aria-labelledby="title desc">
+  <title id="title">Trello Manager Safe workflow</title>
+  <desc id="desc">Discover the target, review the proposed change, get approval, apply it, and verify the result.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122e34"/><stop offset="1" stop-color="#102730"/></linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2fae9d"/><stop offset=".62" stop-color="#48c5a9"/><stop offset="1" stop-color="#66a9ff"/></linearGradient>
+    <style>
+      .sans{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+      .track{stroke:#31545b;stroke-width:4;stroke-linecap:round}.moving{stroke:url(#flow);stroke-width:4;stroke-linecap:round;stroke-dasharray:10 16;animation:travel 2.8s linear infinite}
+      .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.8s ease-in-out infinite}.p2{animation-delay:.55s}.p3{animation-delay:1.1s}.p4{animation-delay:1.65s}.p5{animation-delay:2.2s}
+      @keyframes travel{to{stroke-dashoffset:-104}}
+      @keyframes pulse{0%,100%{r:26;opacity:.16}35%{r:37;opacity:.55}}
+      @media(prefers-reduced-motion:reduce){.moving,.pulse{animation:none}}
+    </style>
+  </defs>
+  <rect x="12" y="12" width="1416" height="296" rx="30" fill="url(#panel)" stroke="#24464d" stroke-width="2"/>
+  <path d="M155 112H1285" class="track"/>
+  <path d="M155 112H1285" class="moving"/>
+  <g class="sans" text-anchor="middle">
+    <g transform="translate(155 112)"><circle class="pulse" r="26" fill="#53d6bc"/><circle r="25" fill="#2aa594"/><circle r="6" fill="#e9fffb"/></g>
+    <g transform="translate(437 112)"><circle class="pulse p2" r="26" fill="#53d6bc"/><circle r="25" fill="#2aa594"/><circle r="6" fill="#e9fffb"/></g>
+    <g transform="translate(719 112)"><circle class="pulse p3" r="26" fill="#f3c56b"/><circle r="25" fill="#b98732"/><circle r="6" fill="#fff8e8"/></g>
+    <g transform="translate(1001 112)"><circle class="pulse p4" r="26" fill="#53d6bc"/><circle r="25" fill="#2aa594"/><circle r="6" fill="#e9fffb"/></g>
+    <g transform="translate(1283 112)"><circle class="pulse p5" r="26" fill="#79b3ff"/><circle r="25" fill="#3978bd"/><circle r="6" fill="#eff6ff"/></g>
+    <text x="155" y="184" fill="#71e0cb" font-size="21" font-weight="700" class="mono">Discover</text>
+    <text x="437" y="184" fill="#71e0cb" font-size="21" font-weight="700" class="mono">Review</text>
+    <text x="719" y="184" fill="#ffd47e" font-size="21" font-weight="700" class="mono">Approve</text>
+    <text x="1001" y="184" fill="#71e0cb" font-size="21" font-weight="700" class="mono">Apply</text>
+    <text x="1283" y="184" fill="#91c3ff" font-size="21" font-weight="700" class="mono">Verify</text>
+    <text x="155" y="220" fill="#c4d8dc" font-size="16">Find the right board</text>
+    <text x="437" y="220" fill="#c4d8dc" font-size="16">Show the exact change</text>
+    <text x="719" y="220" fill="#c4d8dc" font-size="16">Wait for user consent</text>
+    <text x="1001" y="220" fill="#c4d8dc" font-size="16">Run with --confirm</text>
+    <text x="1283" y="220" fill="#c4d8dc" font-size="16">Read back the result</text>
+    <text x="720" y="274" fill="#76d8c4" font-size="13" letter-spacing="1.4">HUMAN APPROVAL BEFORE EVERY MUTATION · PERMANENT DELETE DISABLED</text>
+  </g>
+</svg>
